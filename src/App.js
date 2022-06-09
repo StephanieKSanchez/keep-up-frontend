@@ -1,13 +1,19 @@
+import { Layout } from "antd";
+import { Content, Header } from "antd/lib/layout/layout";
 import "./App.css";
 import DestinationList from "./components/DestinationList";
+import Menubar from "./components/Menubar";
 
 function App() {
   return (
-    <>
-      <h1>
+    <Layout className="layout">
+      <Header>
+        <Menubar />
+      </Header>
+      <Content>
         <DestinationList />
-      </h1>
-    </>
+      </Content>
+    </Layout>
   );
 }
 
