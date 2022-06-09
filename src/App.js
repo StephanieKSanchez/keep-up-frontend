@@ -1,10 +1,13 @@
 import "./App.css";
+import DestinationList from "./components/DestinationList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header"></header>
-    </div>
+    <>
+      <h1>
+        <DestinationList />
+      </h1>
+    </>
   );
 }
 
