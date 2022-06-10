@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Button, Form, Input } from "antd";
 
 export default function AddDestination() {
   let navigate = useNavigate();
 
-  const [name, setName] = useState();
-  const [beginDate, setBeginDate] = useState();
-  const [endDate, setEndDate] = useState();
-  const [image, setImage] = useState();
-  const [status, setStatus] = useState();
-  const [error, setError] = useState();
+  const [name, setName] = useState("");
+  const [beginDate, setBeginDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [image, setImage] = useState("");
+  const [status, setStatus] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -28,59 +29,61 @@ export default function AddDestination() {
     <section style={{ margin: "2em 1em" }}>
       <h1>Add Destination</h1>
       {error && <h2 style={{ color: "red" }}>{error}</h2>}
-      <form onSubmit={handleSubmit}>
-        <label for="name">
+      <Form onFinish={handleSubmit}>
+        <Form.Item for="name">
           Name:
-          <input
+          <Input
             name="name"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="begin date">
+        <Form.Item for="begin date">
           Begin Date:
-          <input
+          <Input
             name="begin date"
             type="date"
             value={beginDate}
             onChange={(e) => setBeginDate(e.target.value)}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="end date">
+        <Form.Item for="end date">
           End Date:
-          <input
+          <Input
             name="end date"
             type="date"
             value={endDate}
             onChange={(e) => setEndDate(e.target.value)}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="status">
+        <Form.Item for="status">
           Status:
-          <input
+          <Input
             name="status"
             type="text"
             value={status}
             onSelect={(e) => setStatus(e.target.value)}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="image">
+        <Form.Item for="image">
           Photo:
-          <input
+          <Input
             name="image"
             type="url"
             value={image}
             onChange={(e) => setImage(e.target.value)}
           />
-        </label>
+        </Form.Item>
         <br />
-        <button type="submit">Submit</button>
-      </form>
+        <Button type="primary" htmlType="submit">
+          Submit
+        </Button>
+      </Form>
     </section>
   );
 }
