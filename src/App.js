@@ -17,6 +17,7 @@ function App() {
             <Route path="/add" element={<h1>Add Destination </h1>} />
             <Route path="/login" element={<h1>Login </h1>} />
             <Route path="/" element={<DestinationList />} />
+            <Route path="/*" element={<h1>Invalid Request</h1>} />
           </Routes>
         </Content>
       </Layout>
