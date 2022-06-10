@@ -19,7 +19,7 @@ export default function AddDestination() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newRestaurant),
+      body: JSON.stringify(newDestination),
     })
       .then(() => navigate("/"))
       .catch(setError);
@@ -79,6 +79,7 @@ export default function AddDestination() {
           />
         </label>
         <br />
+        <button type="submit">Submit</button>
       </form>
     </section>
   );

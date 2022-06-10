@@ -22,14 +22,16 @@ export default function DestinationCard({ destination }) {
         loading={!destination}
         onClick={() => navigate(`/destinations/${destination.id}`)}
         cover={
-          <img
-            alt={`Image representing ${destination.name}`}
-            src={destination.image}
-          />
+          destination && (
+            <img
+              alt={`Image representing ${destination.name}`}
+              src={destination.image}
+            />
+          )
         }
         hoverable
       >
-        <Meta title={destination.name} />
+        <Meta title={destination?.name} />
         <br />
         <p>
           <Space direction="vertical" description="RangePicker">
