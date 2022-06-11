@@ -6,27 +6,30 @@ import AddDestination from "./components/AddDestination";
 import DestinationList from "./components/DestinationList";
 import DestinationPage from "./components/DestinationPage";
 import Menubar from "./components/Menubar";
+import { DestinationsContextProvider } from "./context/DestinationsContext";
 
 function App() {
   return (
     <BrowserRouter>
-      <Layout className="layout">
-        <Header>
-          <Menubar />
-        </Header>
-        <Content>
-          <Routes>
-            <Route
-              path="/destinations/:destinationId"
-              element={<DestinationPage />}
-            />
-            <Route path="/add" element={<AddDestination />} />
-            <Route path="/login" element={<h1>Login </h1>} />
-            <Route path="/" element={<DestinationList />} />
-            <Route path="/*" element={<h1>Invalid Request</h1>} />
-          </Routes>
-        </Content>
-      </Layout>
+      <DestinationsContextProvider>
+        <Layout className="layout">
+          <Header>
+            <Menubar />
+          </Header>
+          <Content>
+            <Routes>
+              <Route
+                path="/destinations/:destinationId"
+                element={<h1>Destination Page</h1>}
+              />
+              <Route path="/add" element={<AddDestination />} />
+              <Route path="/login" element={<h1>Login </h1>} />
+              <Route path="/" element={<DestinationList />} />
+              <Route path="/*" element={<h1>Invalid Request</h1>} />
+            </Routes>
+          </Content>
+        </Layout>
+      </DestinationsContextProvider>
     </BrowserRouter>
   );
 }

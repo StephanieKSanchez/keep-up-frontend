@@ -11,5 +11,9 @@ export default function DestinationPage() {
       .then((data) => setDestination(data))
       .catch(console.error);
   }, [destinationId]);
-  return <DestinationCard destination={destination} />;
+  return (
+    <>
+      <DestinationCard destination={destination} />
+    </>
+  );
 }

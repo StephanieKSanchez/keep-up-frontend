@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Row } from "antd";
 import DestinationCard from "./DestinationCard";
+import { DestinationsContext } from "./DestinationContext";
 
 function DestinationList() {
-  const [destinations, setDestinations] = useState();
+  const { destinations, setDestinations } = useContext(DestinationsContext);
   useEffect(() => {
     fetch("https://keep-up-sks.web.app/destinations")
       .then((response) => response.json())

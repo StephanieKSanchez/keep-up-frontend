@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Col, Card, Space, DatePicker, Select } from "antd";
 import { useNavigate } from "react-router-dom";
+import { EditOutlined } from "@ant-design/icons";
 const { Meta } = Card;
 
 const { RangePicker } = DatePicker;
@@ -20,7 +21,7 @@ export default function DestinationCard({ destination }) {
     <Col style={{ width: "300px", margin: "1.5em" }} key={destination.id}>
       <Card
         loading={!destination}
-        onClick={() => navigate(`/destinations/${destination.id}`)}
+        // onClick={() => navigate(`/destinations/${destination.id}`)}
         cover={
           destination && (
             <img
@@ -31,7 +32,7 @@ export default function DestinationCard({ destination }) {
         }
         hoverable
       >
-        <Meta title={destination?.name} />
+        <Meta title={destination?.name} description={destination.beginDate} />
         <br />
         <p>
           <Space direction="vertical" description="RangePicker">
@@ -54,6 +55,9 @@ export default function DestinationCard({ destination }) {
             <Option optionValue="completed">Completed</Option>
           </Select>
         </p>
+        <EditOutlined
+          onClick={() => navigate(`/destinations/${destination.id}`)}
+        />
       </Card>
     </Col>
   );
