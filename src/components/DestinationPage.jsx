@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import DestinationCard from "./DestinationCard";
+import DetailsPage from "./DetailsPage";
 
 export default function DestinationPage() {
   const { destinationId } = useParams();
@@ -13,7 +13,7 @@ export default function DestinationPage() {
   }, [destinationId]);
   return (
     <>
-      <DestinationCard destination={destination} />
+      <DetailsPage destination={destination} />
     </>
   );
 }

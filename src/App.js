@@ -4,9 +4,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import AddDestination from "./components/AddDestination";
 import DestinationList from "./components/DestinationList";
-import DestinationPage from "./components/DestinationPage";
+// import DestinationPage from "./components/DestinationPage";
 import Menubar from "./components/Menubar";
 import { DestinationsContextProvider } from "./components/DestinationContext";
+import DetailsPage from "./components/DetailsPage";
+import DestinationPage from "./components/DestinationPage";
 
 function App() {
   return (
@@ -20,7 +22,7 @@ function App() {
             <Routes>
               <Route
                 path="/destinations/:destinationId"
-                element={<h1>Destination Page</h1>}
+                element={<DestinationPage />}
               />
               <Route path="/add" element={<AddDestination />} />
               <Route path="/login" element={<h1>Login </h1>} />

@@ -56,7 +56,9 @@ export default function DestinationCard({ destination }) {
           </Select>
         </p>
         <EditOutlined
-          onClick={() => navigate(`/destinations/${destination.id}`)}
+          onClick={() =>
+            navigate(`/destinations/${destination.id}`, { destination })
+          }
         />
       </Card>
     </Col>
