@@ -6,7 +6,7 @@ import AddDestination from "./components/AddDestination";
 import DestinationList from "./components/DestinationList";
 import DestinationPage from "./components/DestinationPage";
 import Menubar from "./components/Menubar";
-import { DestinationsContextProvider } from "./context/DestinationsContext";
+import { DestinationsContextProvider } from "./components/DestinationContext";
 
 function App() {
   return (

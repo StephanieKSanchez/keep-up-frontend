@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 export const DestinationsContext = createContext({});
 
-export const DestinationContextProvider = ({ children }) => {
+export const DestinationsContextProvider = ({ children }) => {
   const { Provider } = DestinationsContext;
   const [destinations, setDestinations] = useState();
 
