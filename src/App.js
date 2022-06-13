@@ -7,7 +7,6 @@ import DestinationList from "./components/DestinationList";
 // import DestinationPage from "./components/DestinationPage";
 import Menubar from "./components/Menubar";
 import { DestinationsContextProvider } from "./components/DestinationContext";
-import DetailsPage from "./components/DetailsPage";
 import DestinationPage from "./components/DestinationPage";
 
 function App() {
