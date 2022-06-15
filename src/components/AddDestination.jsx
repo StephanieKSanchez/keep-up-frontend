@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Form, Input, message, Upload } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
+// import SearchPhotos from "./searchPhotos";
 
 const props = {
   name: "file",
@@ -71,6 +72,10 @@ export default function AddDestination() {
         <Upload {...props}>
           <Button icon={<UploadOutlined />}>Click to upload</Button>
         </Upload>
+        <br />
+        {/* <Form.Item>
+          <SearchPhotos />
+        </Form.Item> */}
         <br />
         <Button type="primary" htmlType="submit">
           Submit
