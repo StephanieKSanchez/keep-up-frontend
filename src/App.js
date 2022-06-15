@@ -9,6 +9,7 @@ import { DestinationsContextProvider } from "./components/DestinationContext";
 import DestinationPage from "./components/DestinationPage";
 import { createContext, useState } from "react";
 import Login from "./components/Login";
+import Home from "./components/Home";
 
 export const UserContext = createContext(null);
 
@@ -28,12 +29,19 @@ function App() {
                   path="/destinations/:destinationId"
                   element={<DestinationPage />}
                 />
-                <Route path="/add" element={<AddDestination />} />
+                <Route
+                  path="/add"
+                  element={!user ? <Login /> : <AddDestination />}
+                />
                 <Route
                   path="/login"
                   element={!user ? <Login /> : <DestinationList />}
                 />
-                <Route path="/" element={<DestinationList />} />
+                <Route
+                  path="/destinations"
+                  element={!user ? <Login /> : <DestinationList />}
+                />
+                <Route path="/" element={<Home />} />
                 <Route path="/*" element={<h1>Invalid Request</h1>} />
               </Routes>
             </Content>
