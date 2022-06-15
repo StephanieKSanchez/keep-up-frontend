@@ -55,11 +55,15 @@ export default function DestinationCard({ destination }) {
             <Option optionValue="completed">Completed</Option>
           </Select>
         </p>
-        <EditOutlined
+        <button
+          className="detailsButton"
+          title="Details"
           onClick={() =>
             navigate(`/destinations/${destination.id}`, { destination })
           }
-        />
+        >
+          Details
+        </button>
       </Card>
     </Col>
   );

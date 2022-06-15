@@ -39,8 +39,13 @@ export default function AddDestination() {
           <Input />
         </Form.Item>
         <br />
-        <Form.Item name="image" type="url" label="Photo:">
-          <Input />
+        <Form.Item
+          name="image"
+          type="url"
+          label="Photo:"
+          action="/action_page.php"
+        >
+          <input type="file" id="myFile" name="filename" />
         </Form.Item>
         <br />
         <Button type="primary" htmlType="submit">
