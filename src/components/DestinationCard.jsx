@@ -32,9 +32,9 @@ export default function DestinationCard({ destination }) {
         }
         hoverable
       >
-        <Meta title={destination?.name} description={destination.beginDate} />
+        <Meta title={destination?.name} />
         <br />
-        <p>
+        {/* <p>
           <Space direction="vertical" description="RangePicker">
             <RangePicker
               onCalendarChange={(newValue) => {
@@ -43,7 +43,9 @@ export default function DestinationCard({ destination }) {
               }}
             />
           </Space>
-        </p>
+        </p> */}
+        <p> Begin Date: {destination.beginDate} </p>
+        <p> End Date: {destination.endDate} </p>
         <p>
           <Select
             placeholder="Status"
