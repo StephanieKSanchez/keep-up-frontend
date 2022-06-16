@@ -10,6 +10,7 @@ import DestinationPage from "./components/DestinationPage";
 import { createContext, useState } from "react";
 import Login from "./components/Login";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 export const UserContext = createContext(null);
 
@@ -44,6 +45,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/*" element={<h1>Invalid Request</h1>} />
               </Routes>
+              <Footer />
             </Content>
           </Layout>
         </DestinationsContextProvider>
