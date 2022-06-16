@@ -1,6 +1,8 @@
+import "../styling/footer.css";
+
 export default function Footer() {
   return (
-    <footer className="flex h-12 px-8 font-cabinet font-medium bg-black text-white justify-center items-center">
+    <footer className="footerContainer">
       <p>
         Copyright &copy; 2022.{" "}
         <a

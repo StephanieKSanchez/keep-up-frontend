@@ -11,6 +11,7 @@ import { createContext, useState } from "react";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
+import Body from "./components/Body";
 
 export const UserContext = createContext(null);
 
@@ -32,7 +33,7 @@ function App() {
                 />
                 <Route
                   path="/add"
-                  // element={!user ? <Login /> : <AddDestination />}
+                  element={!user ? <Login /> : <AddDestination />}
                 />
                 <Route
                   path="/login"

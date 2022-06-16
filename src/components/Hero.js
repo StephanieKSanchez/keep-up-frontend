@@ -13,14 +13,14 @@ export default function Hero() {
         <div className="font-cabinet text-2xl font-medium my-2">
           Keep up with your travel
         </div>
-        {}
+        {/* {}
 
         <Link
           to={!user ? "/login" : "/destinations"}
           className="mr-auto text-center my-8 font-bold hover:opacity-80 bg-black py-2 px-4 text-white rounded-lg active:scale-110 transition-all"
         >
           Get Started
-        </Link>
+        </Link> */}
       </div>
       <div className="ml-auto">
         <img
