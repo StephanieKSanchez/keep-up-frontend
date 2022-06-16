@@ -31,7 +31,7 @@ function App() {
                 />
                 <Route
                   path="/add"
-                  element={!user ? <Login /> : <AddDestination />}
+                  // element={!user ? <Login /> : <AddDestination />}
                 />
                 <Route
                   path="/login"
