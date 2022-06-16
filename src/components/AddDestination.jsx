@@ -1,28 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Form, Input, message, Upload } from "antd";
-import { UploadOutlined } from "@ant-design/icons";
-// import SearchPhotos from "./searchPhotos";
-
-const props = {
-  name: "file",
-  action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
-  headers: {
-    authorization: "authorization-text",
-  },
-
-  onChange(info) {
-    if (info.file.status !== "uploading") {
-      console.log(info.file, info.fileList);
-    }
-
-    if (info.file.status === "done") {
-      message.success(`${info.file.name} file uploaded successfully`);
-    } else if (info.file.status === "error") {
-      message.error(`${info.file.name} file upload failed.`);
-    }
-  },
-};
+import { Button, Form, Input } from "antd";
 
 export default function AddDestination() {
   let navigate = useNavigate();
@@ -37,7 +15,7 @@ export default function AddDestination() {
       },
       body: JSON.stringify(newDestination),
     })
-      .then(() => navigate("/"))
+      .then(() => navigate("/destinations"))
       .catch(setError);
   };
   return (
@@ -61,21 +39,11 @@ export default function AddDestination() {
           <Input />
         </Form.Item>
         <br />
-        {/* <Form.Item
-          name="image"
-          type="url"
-          label="Photo:"
-          action="/action_page.php"
-        >
-          <input type="file" id="myFile" name="filename" />
-        </Form.Item> */}
-        <Upload {...props}>
-          <Button icon={<UploadOutlined />}>Click to upload</Button>
-        </Upload>
-        <br />
-        {/* <Form.Item>
-          <SearchPhotos />
-        </Form.Item> */}
+        <Form.Item name="image" type="url" label="Photo:">
+          <Input
+            placeholder={"Paste the url for your destination's picture here"}
+          />
+        </Form.Item>
         <br />
         <Button type="primary" htmlType="submit">
           Submit

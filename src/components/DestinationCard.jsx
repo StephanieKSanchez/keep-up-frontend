@@ -15,8 +15,8 @@ export default function DestinationCard({ destination }) {
   let navigate = useNavigate();
   const [beginDate, setBeginDate] = useState();
   const [endDate, setEndDate] = useState();
-  console.log(beginDate);
-  console.log(endDate);
+  // console.log(beginDate);
+  // console.log(endDate);
   return (
     <Col style={{ width: "300px", margin: "1.5em" }} key={destination.id}>
       <Card

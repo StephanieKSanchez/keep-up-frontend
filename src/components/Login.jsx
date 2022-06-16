@@ -16,7 +16,6 @@ const firebaseConfig = {
   storageBucket: "keep-up-sks.appspot.com",
   messagingSenderId: "783721153247",
   appId: "1:783721153247:web:f2260d3fd0ba60a0445f6a",
-  measurementId: "G-TNCEYHZMV0",
 };
 
 export default function Login() {
