@@ -1,22 +1,50 @@
 import { Card, Col, Row } from "antd";
+import "../styling/body.css";
 
 export default function Body() {
   return (
     <>
       <h3>Easy to use, easy to share</h3>
-      <Row gutter={16}>
+      <Row gutter={16} className="row">
         <Col span={8}>
-          <Card title="Stay organized" bordered={false}>
+          <Card
+            title="Stay organized"
+            bordered={false}
+            style={{
+              width: 400,
+              margin: "20px",
+              borderRadius: "20px",
+              overflow: "hidden",
+            }}
+          >
             Keep all your travel details in one place
           </Card>
         </Col>
         <Col span={8}>
-          <Card title="Share it" bordered={false}>
+          <Card
+            title="Share it"
+            bordered={false}
+            style={{
+              width: 400,
+              margin: "20px",
+              borderRadius: "20px",
+              overflow: "hidden",
+            }}
+          >
             Everyone on the same page
           </Card>
         </Col>
         <Col span={8}>
-          <Card title="Stress less" bordered={false}>
+          <Card
+            title="Stress less"
+            bordered={false}
+            style={{
+              width: 400,
+              margin: "20px",
+              borderRadius: "20px",
+              overflow: "hidden",
+            }}
+          >
             Enjoy knowing your plans are set
           </Card>
         </Col>
