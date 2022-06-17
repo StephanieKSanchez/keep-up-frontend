@@ -1,17 +1,26 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../App";
+import "../styling/hero.css";
 
 export default function Hero() {
   const { user } = useContext(UserContext);
   return (
-    <section className="h-screen-1/2  bg-slate-100 px-8 flex flex-col sm:flex-col md:flex-row">
-      <div className="flex flex-col mt-8 justify-center">
-        <div className="font-cabinet text-4xl md:text-5xl lg:text-6xl font-extrabold my-2">
-          The place for keeping travel details together
+    <section className="hero-section">
+      <div>
+        <div className="hero-tile">
+          <h1>
+            The place
+            <br />
+            for keeping
+            <br />
+            travel details together
+          </h1>
         </div>
-        <div className="font-cabinet text-2xl font-medium my-2">
-          Keep up with your travel
+        <div className="hero-text">
+          Keep up
+          <br />
+          with your travel
         </div>
         {/* {}
 
@@ -22,12 +31,12 @@ export default function Hero() {
           Get Started
         </Link> */}
       </div>
-      <div className="ml-auto">
+      {/* <div className="hero-pic">
         <img
           src="../assets/group.jpg"
           alt="Silhouette photo of six persons on top of mountain"
         />
-      </div>
+      </div> */}
     </section>
   );
 }

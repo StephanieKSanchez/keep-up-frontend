@@ -5,13 +5,14 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
+import "../styling/menuBar.css";
 
 const { Item } = Menu;
 
 export default function Menubar() {
   let navigate = useNavigate();
   return (
-    <Menu theme="dark" mode="horizontal">
+    <Menu theme="dark" mode="horizontal" className="menuBar">
       <Item
         key="home"
         onClick={() => navigate("/")}
