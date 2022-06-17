@@ -11,8 +11,6 @@ export default function Body() {
             title="Stay organized"
             bordered={false}
             style={{
-              width: 400,
-              margin: "20px",
               borderRadius: "20px",
               overflow: "hidden",
             }}
@@ -25,8 +23,6 @@ export default function Body() {
             title="Share it"
             bordered={false}
             style={{
-              width: 400,
-              margin: "20px",
               borderRadius: "20px",
               overflow: "hidden",
             }}
@@ -39,8 +35,6 @@ export default function Body() {
             title="Stress less"
             bordered={false}
             style={{
-              width: 400,
-              margin: "20px",
               borderRadius: "20px",
               overflow: "hidden",
             }}
