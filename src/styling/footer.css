@@ -1,7 +1,8 @@
-.footerContainer {
+footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
   padding: 50px 0px 0px 0px;
+  color: black;
 }
