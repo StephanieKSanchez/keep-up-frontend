@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Form, Input } from "antd";
+import "../styling/addDestination.css";
 
 export default function AddDestination() {
   let navigate = useNavigate();
@@ -19,10 +20,10 @@ export default function AddDestination() {
       .catch(setError);
   };
   return (
-    <section style={{ margin: "2em 1em" }}>
+    <section style={{ margin: "2em 1em" }} className="form2">
       <h1>Add Destination</h1>
       {error && <h2 style={{ color: "red" }}>{error}</h2>}
-      <Form onFinish={handleSubmit}>
+      <Form onFinish={handleSubmit} className="form">
         <Form.Item name="name" type="text" label="Name:">
           <Input />
         </Form.Item>

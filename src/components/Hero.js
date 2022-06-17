@@ -22,14 +22,9 @@ export default function Hero() {
           <br />
           with your travel
         </div>
-        {/* {}
-
-        <Link
-          to={!user ? "/login" : "/destinations"}
-          className="mr-auto text-center my-8 font-bold hover:opacity-80 bg-black py-2 px-4 text-white rounded-lg active:scale-110 transition-all"
-        >
+        <Link to={!user ? "/login" : "/destinations"} className="hero-link">
           Get Started
-        </Link> */}
+        </Link>
       </div>
       {/* <div className="hero-pic">
         <img

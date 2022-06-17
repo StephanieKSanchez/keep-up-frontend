@@ -3,7 +3,7 @@ import "../styling/body.css";
 
 export default function Body() {
   return (
-    <>
+    <div className="Body">
       <h3>Easy to use, easy to share</h3>
       <Row gutter={16} className="row">
         <Col span={8}>
@@ -62,6 +62,6 @@ export default function Body() {
           <div>Everyone on the same page</div>
         </li>
       </ul> */}
-    </>
+    </div>
   );
 }

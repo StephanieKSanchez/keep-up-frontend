@@ -30,4 +30,8 @@ section > div > div > h1 {
   font-weight: 300;
 }
 
-@media only screen and (min-device-width: 768px);
+.hero-link {
+  font-size: 25px;
+}
+
+/* @media only screen and (min-device-width: 768px); */
