@@ -8,20 +8,36 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 
-section {
+.hero {
+  display: flex;
   background-image: url(https://s.inspirockcdn.com/images/home/hero-klarna.png);
-  background-size: cover;
   font-family: "Poppins", sans-serif;
   opacity: 1;
   color: #fffab0;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-flow: column wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  align-items: flex-start;
 }
 
-section > div > div > h1 {
-  font-size: 45px;
-  font-weight: 500;
-  max-width: 660px;
+.hero-title {
   color: #fffab0;
+  line-height: 1.05;
+  margin-bottom: 24px;
+  margin: 0;
+  font-size: 60px;
+  font-weight: 700;
+  max-width: 660px;
+  text-shadow: 0 9px 25px rgb(0 0 0 / 15%);
 }
 
 .hero-text {
@@ -30,8 +46,21 @@ section > div > div > h1 {
   font-weight: 300;
 }
 
-.hero-link {
-  font-size: 25px;
+.hero-link-button {
+  background: #fff;
+  color: #0e0e0f;
+  font-weight: 500;
+  font-size: 16px;
+  border: solid 1px #fff;
+  border-radius: 35px;
+  padding: 0 25px;
+  height: 40px;
+  /* display: inline-flex; */
+  -webkit-box-align: center;
+  /* align-items: center;
+  -webkit-box-pack: center; */
+  justify-content: center;
+  float: right;
 }
 
 /* @media only screen and (min-device-width: 768px); */

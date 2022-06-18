@@ -6,9 +6,13 @@ import "../styling/hero.css";
 export default function Hero() {
   const { user } = useContext(UserContext);
   return (
-    <section className="hero-section">
-      <div>
-        <div className="hero-tile">
+    <div className="hero">
+      <section className="hero-section">
+        {/* <img
+          src="https://s.inspirockcdn.com/images/home/hero-klarna.png"
+          className="Hero-image"
+        /> */}
+        <div className="hero-title">
           <h1>
             The place
             <br />
@@ -22,16 +26,16 @@ export default function Hero() {
           <br />
           with your travel
         </div>
-        <Link to={!user ? "/login" : "/destinations"} className="hero-link">
-          Get Started
+        <Link to={!user ? "/login" : "/destinations"}>
+          <button className="hero-link-button">Get Started</button>
         </Link>
-      </div>
-      {/* <div className="hero-pic">
+        {/* <div className="hero-pic">
         <img
           src="../assets/group.jpg"
           alt="Silhouette photo of six persons on top of mountain"
         />
       </div> */}
-    </section>
+      </section>
+    </div>
   );
 }
