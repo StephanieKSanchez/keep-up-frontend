@@ -8,6 +8,7 @@ import {
 } from "firebase/auth";
 import { Button, Form, Input } from "antd";
 import { UserContext } from "../App";
+import "../styling/login.css";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDyL4LqoosWiEjj8not4UfM1GACTP8esa0",
@@ -62,16 +63,9 @@ export default function Login() {
           </Button>
         </Form.Item> */}
         <Form.Item wrapperCol={{ span: 16, offset: 8 }}>
-          <h1 className="text-4xl text-center font-extrabold mb-8">
-            Welcome to Keep Up
-          </h1>
-          <p className="text-center text-2xl mb-8">
-            Please sign in below to get started
-          </p>
-          <Button
-            onClick={handleGoogleLogin}
-            className="flex h-12 items-center justify-center border-2 font-bold border-black text-xl rounded-lg p-2 w-full sm:w-1/2  mt-4 mx-auto"
-          >
+          <h1 className="welcome">Welcome to Keep Up</h1>
+          <p className="signin">Please sign in below to get started</p>
+          <Button onClick={handleGoogleLogin} className="google-button">
             <svg
               className="mr-4"
               viewBox="0 0 24 24"
