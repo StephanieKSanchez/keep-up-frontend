@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Col, Card, Space, DatePicker, Select } from "antd";
 import { useNavigate } from "react-router-dom";
 import { EditOutlined } from "@ant-design/icons";
+import "../styling/destinationCard.css";
 const { Meta } = Card;
 
 const { RangePicker } = DatePicker;
@@ -13,8 +14,8 @@ function handleChange(optionValue) {
 
 export default function DestinationCard({ destination }) {
   let navigate = useNavigate();
-  const [beginDate, setBeginDate] = useState();
-  const [endDate, setEndDate] = useState();
+  // const [beginDate, setBeginDate] = useState();
+  // const [endDate, setEndDate] = useState();
   // console.log(beginDate);
   // console.log(endDate);
   return (
