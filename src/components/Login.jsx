@@ -6,7 +6,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
-import { Button, Form, Input } from "antd";
+import { Button, Form } from "antd";
 import { UserContext } from "../App";
 import "../styling/login.css";
 

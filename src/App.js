@@ -11,7 +11,6 @@ import { createContext, useState } from "react";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
-import Body from "./components/Body";
 
 export const UserContext = createContext(null);
 

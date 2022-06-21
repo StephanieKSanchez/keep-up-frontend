@@ -10,7 +10,7 @@ function DestinationList() {
       .then((response) => response.json())
       .then((data) => setDestinations(data))
       .catch(console.error);
-  }, []);
+  }, [setDestinations]);
   return (
     <section style={{ marginTop: "60px" }}>
       <Row>
