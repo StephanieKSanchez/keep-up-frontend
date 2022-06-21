@@ -57,6 +57,7 @@ export default function DestinationCard({ destination }) {
             <Option optionValue="completed">Completed</Option>
           </Select> */}
         </p>
+        {/* <p> Status: {destination.status} </p> */}
         <button
           className="detailsButton"
           title="Details"
