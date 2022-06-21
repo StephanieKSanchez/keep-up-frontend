@@ -1,16 +1,16 @@
-import { useState } from "react";
-import { Col, Card, Space, DatePicker, Select } from "antd";
+// import { useState } from "react";
+import { Col, Card } from "antd";
 import { useNavigate } from "react-router-dom";
-import { EditOutlined } from "@ant-design/icons";
+// import { EditOutlined } from "@ant-design/icons";
 import "../styling/destinationCard.css";
 const { Meta } = Card;
 
-const { RangePicker } = DatePicker;
-const { Option } = Select;
+// const { RangePicker } = DatePicker;
+// const { Option } = Select;
 
-function handleChange(optionValue) {
-  console.log(`selected ${optionValue}`);
-}
+// function handleChange(optionValue) {
+//   console.log(`selected ${optionValue}`);
+// }
 
 export default function DestinationCard({ destination }) {
   let navigate = useNavigate();
