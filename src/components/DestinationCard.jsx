@@ -47,7 +47,7 @@ export default function DestinationCard({ destination }) {
         <p> Begin Date: {destination.beginDate} </p>
         <p> End Date: {destination.endDate} </p>
         <p>
-          <Select
+          {/* <Select
             placeholder="Status"
             style={{ width: 120 }}
             onChange={handleChange}
@@ -55,7 +55,7 @@ export default function DestinationCard({ destination }) {
             <Option optionValue="upcoming">Upcoming</Option>
             <Option optionValue="in progress">In Progress</Option>
             <Option optionValue="completed">Completed</Option>
-          </Select>
+          </Select> */}
         </p>
         <button
           className="detailsButton"
