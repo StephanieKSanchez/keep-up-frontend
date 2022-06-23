@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { Row } from "antd";
 import DestinationCard from "./DestinationCard";
 import { DestinationsContext } from "./DestinationContext";
+import LogOutButton from "./LogOut";
 
 function DestinationList() {
   const { destinations, setDestinations } = useContext(DestinationsContext);
@@ -13,6 +14,7 @@ function DestinationList() {
   }, [setDestinations]);
   return (
     <section style={{ marginTop: "60px" }}>
+      <LogOutButton />
       <Row>
         {!destinations ? (
           <h2>Loading...</h2>

@@ -1,0 +1,16 @@
+#logoutButton {
+  font-weight: 900;
+  font-size: larger;
+  background: 0 0;
+  color: var(--Text-color);
+  box-shadow: 0 0 0 2px var(--Text-color);
+  border-radius: 3px;
+  padding: 5px 2em;
+  transition: 0.5s;
+  margin: 10px;
+}
+
+#logoutButtonContainer {
+  display: flex;
+  justify-content: right;
+}
